@@ -1,21 +1,17 @@
-:root {
-  --bg: #fafafa;
-  --text: #111111;
-  --muted: #666666;
-  --accent: #2563eb; /* subtle blue */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import "./styles/tokens.css";
+
+/* Custom styles leveraging tokens */
 html, body {
   padding: 0;
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-main {
-  display: block;
-}
+main { display: block; }
 
 .container {
   max-width: 72ch;
@@ -23,15 +19,13 @@ main {
   padding: 2rem 1rem;
 }
 
-h1, h2, h3 {
-  line-height: 1.2;
-}
+h1, h2, h3 { line-height: 1.2; }
 
 h1 { font-size: 2rem; margin-bottom: 0.5rem; }
 h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
 h3 { font-size: 1.125rem; margin: 0.5rem 0; }
 
-p { line-height: 1.6; color: var(--text); }
+p { line-height: 1.6; color: var(--fg); }
 small { color: var(--muted); }
 
 .cards {
@@ -40,42 +34,29 @@ small { color: var(--muted); }
   gap: 1rem;
 }
 .card {
-  background: white;
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
+  background: color-mix(in oklab, var(--surface) calc(100% * var(--contrast)), transparent);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
   padding: 1rem;
 }
 
 .cta {
   display: inline-block;
-  background: var(--accent);
-  color: white;
+  background: var(--brand);
+  color: #031318;
   text-decoration: none;
   padding: 0.6rem 0.9rem;
-  border-radius: 6px;
+  border-radius: calc(var(--radius) - .25rem);
 }
 
-.proof {
-  display: grid;
-  gap: 1rem;
-}
-.proof figure {
-  margin: 0;
-}
+.proof { display: grid; gap: 1rem; }
+.proof figure { margin: 0; }
 .proof img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: 1px solid #eaeaea;
-  background: white;
+  width: 100%; height: auto; display: block;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #fff;
 }
 .figcaption { color: var(--muted); }
 
-.footer {
-  border-top: 1px solid #eaeaea;
-  margin-top: 2rem;
-}
-.disclaimer {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
+.footer { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 2rem; }
+.disclaimer { font-size: 0.9rem; color: var(--muted); }

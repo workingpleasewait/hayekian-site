@@ -24,15 +24,17 @@ export default async function Page() {
   const builtAt = manifest?.built_at_utc ?? 'unknown time';
 
   return (
-    <main>
-      <section id="hero" className="container">
-        <h1>Market intelligence for self-sovereign investors.</h1>
-        <p>
-          Daily signals—regimes, ETF flows, VolumeGate—packaged into the toolkit I use myself.
-        </p>
-        <p>
-          <a className="cta" href="#proof">See Example Output</a>
-        </p>
+    <main className="min-h-dvh">
+      <section id="hero" className="px-6 py-16">
+        <div className="max-w-3xl">
+          <h1 className="h1 mb-3">Market intelligence for self-sovereign investors.</h1>
+          <p className="lead mb-6">
+            Daily signals—regimes, ETF flows, VolumeGate—packaged into the toolkit I use myself.
+          </p>
+          <p>
+            <a className="btn btn-primary" href="#proof">See Example Output</a>
+          </p>
+        </div>
       </section>
 
       <section id="what" className="container">
