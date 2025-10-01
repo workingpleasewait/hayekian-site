@@ -1,62 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 @import "./styles/tokens.css";
 
-/* Custom styles leveraging tokens */
+/* Base typography stack */
 html, body {
   padding: 0;
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+/* Ensure main is block for SSR */
 main { display: block; }
-
-.container {
-  max-width: 72ch;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-h1, h2, h3 { line-height: 1.2; }
-
-h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
-h3 { font-size: 1.125rem; margin: 0.5rem 0; }
-
-p { line-height: 1.6; color: var(--fg); }
-small { color: var(--muted); }
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-.card {
-  background: color-mix(in oklab, var(--surface) calc(100% * var(--contrast)), transparent);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: var(--radius);
-  padding: 1rem;
-}
-
-.cta {
-  display: inline-block;
-  background: var(--brand);
-  color: #031318;
-  text-decoration: none;
-  padding: 0.6rem 0.9rem;
-  border-radius: calc(var(--radius) - .25rem);
-}
-
-.proof { display: grid; gap: 1rem; }
-.proof figure { margin: 0; }
-.proof img {
-  width: 100%; height: auto; display: block;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: #fff;
-}
-.figcaption { color: var(--muted); }
-
-.footer { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 2rem; }
-.disclaimer { font-size: 0.9rem; color: var(--muted); }
