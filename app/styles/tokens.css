@@ -38,6 +38,14 @@
   --contrast: 1;             /* 0.95=lo, 1=default, 1.05=hi */
 }
 
+/* Desktop defaults (override) */
+@media (min-width: 1024px) {
+  :root {
+    --scale: 1.04;
+    --density: 0.96;
+  }
+}
+
 /* Dark/Light optional theme hooks */
 :root.theme-dark { }
 :root.theme-light {

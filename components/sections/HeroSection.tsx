@@ -18,13 +18,22 @@ export function HeroSection() {
             </Button>
           </div>
           <div className="hidden lg:block">
-            <figure className="rounded-[var(--radius)] border border-white/10 overflow-hidden shadow-card">
-              <img
-                src="/proof/latest/console_snippet.png"
-                alt="Console proof snippet preview"
-                className="w-full h-auto"
-              />
-            </figure>
+            <div className="relative max-w-xl ml-auto">
+              <figure className="rounded-[var(--radius)] border border-white/10 overflow-hidden shadow-card">
+                <img
+                  src="/proof/latest/console_snippet.png"
+                  alt="Console proof snippet preview"
+                  className="w-full h-auto"
+                />
+              </figure>
+              <figure className="absolute -bottom-6 -left-8 w-40 rounded-[calc(var(--radius)-.25rem)] border border-white/10 overflow-hidden shadow-card backdrop-blur-sm">
+                <img
+                  src="/proof/latest/etf_inflow.png"
+                  alt="ETF net inflow thumbnail"
+                  className="w-full h-auto"
+                />
+              </figure>
+            </div>
           </div>
         </div>
       </Container>
