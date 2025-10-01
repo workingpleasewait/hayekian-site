@@ -24,7 +24,7 @@ export function FaqSection() {
           <AccordionTrigger>Will there be more?</AccordionTrigger>
           <AccordionContent>Potentially: DeFi add‑ons and deeper dashboards if there’s traction.</AccordionContent>
         </AccordionItem>
-        <Accordion>
+        </Accordion>
       </Container>
     </section>
   );
