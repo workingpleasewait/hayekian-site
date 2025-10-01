@@ -129,6 +129,9 @@ export default async function Page() {
           Educational use only. Not financial advice. No performance guarantees. Tools run locally; you
           control your keys.
         </p>
+        <p className="note">
+          <a href="/og-preview" aria-label="Open Graph preview">OG preview</a>
+        </p>
       </footer>
     </main>
   );
