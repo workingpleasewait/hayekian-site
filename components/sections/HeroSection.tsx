@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section id="hero" className="py-16 lg:py-24">
       <Container>
-        <div className="grid items-center gap-10 lg:grid-cols-2">
+        <div className="grid items-center gap-10 md:grid-cols-2">
           <div>
             <Badge className="mb-3">Hayekian</Badge>
             <h1 className="h1 mb-3">Market intelligence for self-sovereign investors.</h1>
@@ -17,16 +17,16 @@ export function HeroSection() {
               <a href="#proof">See Example Output</a>
             </Button>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <div className="relative max-w-xl ml-auto">
-              <figure className="rounded-[var(--radius)] border border-white/10 overflow-hidden shadow-card">
+<figure className="rounded-[var(--radius)] border border-white/6 overflow-hidden shadow-card">
                 <img
                   src="/proof/latest/console_snippet.png"
                   alt="Console proof snippet preview"
                   className="w-full h-auto"
                 />
               </figure>
-              <figure className="absolute -bottom-6 -left-8 w-40 rounded-[calc(var(--radius)-.25rem)] border border-white/10 overflow-hidden shadow-card backdrop-blur-sm">
+<figure className="absolute -bottom-6 -left-8 w-40 rounded-[calc(var(--radius)-.25rem)] border border-white/6 overflow-hidden shadow-card backdrop-blur-sm">
                 <img
                   src="/proof/latest/etf_inflow.png"
                   alt="ETF net inflow thumbnail"

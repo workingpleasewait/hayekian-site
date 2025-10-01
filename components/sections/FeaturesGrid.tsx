@@ -7,7 +7,7 @@ export function FeaturesGrid() {
     <section id="what" className="py-8 lg:py-12">
       <Container>
         <h2 className="h2 mb-4">What It Is</h2>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <Card>
           <CardHeader>
             <CardTitle>DCA/VA Ladder Planner</CardTitle>
