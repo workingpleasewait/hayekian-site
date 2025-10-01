@@ -9,6 +9,5 @@ Describe the change and why it’s needed.
 - [ ] If visuals changed, ensured CI sync from coinbase-trading will update /public/proof/latest/* and manifest.json
 
 ## References
-- Baseline: claude2.md
-- Spec (authoritative, in coinbase-trading): docs/hayekian_v1_spec.md
-- ClickUp task: https://app.clickup.com/t/86dxx22w6
+- Source of truth (ongoing): claude2.md
+- Historical spec (archival): coinbase-trading/docs/hayekian_v1_spec.md

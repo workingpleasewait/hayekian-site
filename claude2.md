@@ -8,6 +8,9 @@ Overview
 - Purpose: Single-page site introducing Hayekian and the toolkit with concrete proof
 - Source-of-truth for visuals: coinbase-trading repo (proof assets) with CI sync to this repo
 
+Source of truth (governance)
+- Ongoing work and decisions are governed solely by this file (claude2.md)
+- Any prior ClickUp tasks are archival only and must not be treated as authoritative
 Trigger phrases
 - "start with claude"
 - "check claude context"
@@ -22,9 +25,9 @@ Decisions (v1 — Locked)
 - Provenance: Footer shows coinbase-trading @<short_sha> and UTC build time from manifest.json
 
 References
-- Project spec (authoritative): See ClickUp task and v1 summary captured in coinbase-trading/docs/hayekian_v1_spec.md
-- ClickUp Task: https://app.clickup.com/t/86dxx22w6
-
+- Source of truth (ongoing): This file (claude2.md)
+- Historical spec (archival): coinbase-trading/docs/hayekian_v1_spec.md
+- Historical reference (archival): https://app.clickup.com/t/86dxx22w6
 Anti‑drift policy
 - This file is the single source of truth for the site’s verified baseline
 - Update this file whenever: decisions change, DoD changes, or governance/workflows are adjusted
