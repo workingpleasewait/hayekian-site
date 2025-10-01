@@ -1,5 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { HeroAndWhat } from "../components/sections/HeroAndWhat";
+import { ProofSection } from "../components/sections/ProofSection";
+import { CtaRibbon } from "../components/sections/CtaRibbon";
+import { FaqSection } from "../components/sections/FaqSection";
+import { SiteFooter } from "../components/sections/SiteFooter";
 
 type Manifest = {
   source_repo: string;
@@ -25,35 +30,7 @@ export default async function Page() {
 
   return (
     <main className="min-h-dvh">
-      <section id="hero" className="px-6 py-16">
-        <div className="max-w-3xl">
-          <h1 className="h1 mb-3">Market intelligence for self-sovereign investors.</h1>
-          <p className="lead mb-6">
-            Daily signals—regimes, ETF flows, VolumeGate—packaged into the toolkit I use myself.
-          </p>
-          <p>
-            <a className="btn btn-primary" href="#proof">See Example Output</a>
-          </p>
-        </div>
-      </section>
-
-      <section id="what" className="container">
-        <h2>What It Is</h2>
-        <div className="cards">
-          <div className="card">
-            <h3>DCA/VA Ladder Planner</h3>
-            <p>Structured buys, no guesswork.</p>
-          </div>
-          <div className="card">
-            <h3>Daily Intelligence Signals</h3>
-            <p>Regime, ETF flows, DXY/DVOL proxy, VolumeGate.</p>
-          </div>
-          <div className="card">
-            <h3>Local, No Custody</h3>
-            <p>Runs on your machine; your keys stay yours.</p>
-          </div>
-        </div>
-      </section>
+      <HeroAndWhat />
 
       <section id="why" className="container">
         <h2>Why It Helps</h2>
@@ -64,23 +41,8 @@ export default async function Page() {
         </p>
       </section>
 
-      <section id="proof" className="container">
-        <h2>Proof / Example Output</h2>
-        <p>Generated in under 10 seconds. No server required.</p>
-        <div className="proof">
-          <figure>
-            <img src="/proof/latest/console_snippet.png" alt="Console proof snippet" />
-            <figcaption>Console snippet</figcaption>
-          </figure>
-          <figure>
-            <img src="/proof/latest/etf_inflow.png" alt="ETF net inflow spike" />
-            <figcaption>ETF net inflow spike</figcaption>
-          </figure>
-        </div>
-        <small className="provenance">
-          Built from coinbase-trading @{sha} at {builtAt}
-        </small>
-      </section>
+      <ProofSection sha={sha} builtAt={builtAt} />
+      <CtaRibbon />
 
       <section id="included" className="container">
         <h2>What’s Included</h2>
@@ -106,32 +68,9 @@ export default async function Page() {
         </p>
       </section>
 
-      <section id="faq" className="container">
-        <h2>FAQ</h2>
-        <details>
-          <summary>Is this financial advice?</summary>
-          <p>No—educational tools only.</p>
-        </details>
-        <details>
-          <summary>Do I need exchange keys?</summary>
-          <p>Not for the examples; extended features can run locally with your own keys.</p>
-        </details>
-        <details>
-          <summary>Does it place trades?</summary>
-          <p>No. It generates ladders and daily intelligence.</p>
-        </details>
-        <details>
-          <summary>Will there be more?</summary>
-          <p>Potentially: DeFi add‑ons and deeper dashboards if there’s traction.</p>
-        </details>
-      </section>
+      <FaqSection />
 
-      <footer id="footer" className="container footer">
-        <p className="disclaimer">
-          Educational use only. Not financial advice. No performance guarantees. Tools run locally; you
-          control your keys.
-        </p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

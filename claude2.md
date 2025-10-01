@@ -45,3 +45,6 @@ Doc placement rules (summary)
 
 Notes
 - The site is public; coinbase-trading remains private. Proof assets are synced via CI with a manifest to prevent drift.
+
+Changelog
+- 2025-10-01: Replaced initial Hero + Features with consolidated v0-guided section component HeroAndWhat (components/sections/HeroAndWhat.tsx). Wired into app/page.tsx, preserving Proof, CTA, FAQ, and Footer sections. Uses token-aware UI primitives (Container, Button, Card, Badge).
