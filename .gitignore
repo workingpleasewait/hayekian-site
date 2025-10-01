@@ -1,0 +1,18 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+coverage/
+
+# OS / IDE
+.DS_Store
+*.log
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Assets staging (optional)
+assets_tmp/
