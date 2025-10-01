@@ -1,4 +1,28 @@
-export default function Page() {
+import fs from 'node:fs';
+import path from 'node:path';
+
+type Manifest = {
+  source_repo: string;
+  source_sha: string;
+  built_at_utc: string;
+  assets: string[];
+};
+
+async function getManifest(): Promise<Manifest | null> {
+  try {
+    const p = path.join(process.cwd(), 'public', 'proof', 'latest', 'manifest.json');
+    const json = fs.readFileSync(p, 'utf8');
+    return JSON.parse(json);
+  } catch {
+    return null;
+  }
+}
+
+export default async function Page() {
+  const manifest = await getManifest();
+  const sha = manifest?.source_sha ?? 'unknown';
+  const builtAt = manifest?.built_at_utc ?? 'unknown time';
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
@@ -16,7 +40,7 @@ export default function Page() {
               href="#proof"
               className="inline-block rounded-lg bg-primary-cta px-8 py-3 text-base font-semibold text-primary-foreground transition hover:bg-primary-cta-hover focus:outline-none focus:ring-2 focus:ring-primary-cta focus:ring-offset-2"
             >
-              See It In Action
+              See Example Output
             </a>
           </div>
         </div>
@@ -125,6 +149,9 @@ export default function Page() {
               </figcaption>
             </figure>
           </div>
+          <small className="mt-6 block text-center text-xs text-muted-foreground">
+            Built from coinbase-trading @{sha} at {builtAt}
+          </small>
         </div>
       </section>
 
