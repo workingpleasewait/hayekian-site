@@ -2,12 +2,6 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-// 1200 x 630 Open Graph image
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
 export const contentType = 'image/png';
 
 export async function GET(request: Request) {
@@ -67,7 +61,8 @@ export async function GET(request: Request) {
       </div>
     ),
     {
-      ...size,
+      width: 1200,
+      height: 630,
     }
   );
 }
