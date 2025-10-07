@@ -9,6 +9,7 @@ on:
     paths:
       - '**/*.md'
       - '.github/workflows/docs-organization-check.yml'
+  workflow_dispatch:
 
 jobs:
   check-root-markdown:
