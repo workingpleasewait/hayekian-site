@@ -4,7 +4,7 @@ Purpose
 - Keep documentation accurate, organized, and drift‑free.
 
 Placement policy (enforced by CI)
-- Root-level markdown allowed only: README.md, hayekian-site.md, claude2.md (temporary symlink), SECURITY.md
+- Root-level markdown allowed only: README.md, hayekian-site.md, SECURITY.md
 - All other docs belong under docs/
 
 Suggested structure
@@ -19,3 +19,5 @@ Workflows
 Authoritative baseline
 - See hayekian-site.md at repo root for the verified baseline and decisions locked.
 - The v1 site spec lives in coinbase-trading (source of truth) and is referenced from hayekian-site.md.
+
+<!-- CI trigger: docs org & link check -->
