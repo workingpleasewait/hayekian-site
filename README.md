@@ -7,7 +7,7 @@ Public landing site for Hayekian.
 - Entry page: app/page.tsx (Tailwind-only, no external UI libs)
 - Proof assets: public/proof/latest/* (console_snippet.png, etf_inflow.png, manifest.json)
 - Provenance: Proof section shows coinbase-trading @<sha> and UTC build time from manifest
-- Governance: See claude2.md for verified baseline and changelog
+- Governance: See hayekian-site.md for verified baseline and changelog
 
 Local dev
 - npm run dev

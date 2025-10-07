@@ -45,16 +45,27 @@ Development notes specific to this repo
 - There is no ESLint/Prettier setup in v1; rely on TypeScript strictness and Next build/type‑checks
 - The lab route (/lab) is for visual tuning of tokens and primitives; adjust CSS variables to explore scale/density/radius/contrast and theme class (theme-dark/light)
 
-Governance and docs (from claude2.md and docs/README)
-- Verified baseline (claude2.md)
+Governance and docs (from hayekian-site.md and docs/README)
+- Verified baseline (hayekian-site.md)
   - Single source of truth for decisions and anti‑drift; update when decisions/DoD/workflows change
   - Trigger phrases: “start with claude”, “check claude context”
   - Decisions (v1): Next.js App Router, Vercel hosting, Cloudflare Web Analytics (cookie‑less), educational disclaimer, provenance footer (coinbase-trading @<sha>, UTC build time)
 - Documentation placement policy
-  - Root markdown allowed: README.md, claude2.md, SECURITY.md
+  - Root markdown allowed: README.md, hayekian-site.md, claude2.md (temporary symlink), SECURITY.md
   - All other docs belong in docs/
   - docs/README describes checks: docs-organization-check (root .md guard) and docs-link-check (link scan)
 
 Operational tips (non‑obvious)
 - To verify provenance locally, ensure public/proof/latest/manifest.json is present; the homepage will fall back to “unknown” values if absent
 - To preview a production build locally, run: npm run build && npm start (Next’s production server)
+
+Local context policy (start with claude)
+- Triggers: "start with claude", "check claude context"
+- Resolution (local-first):
+  1) ./hayekian-site.md
+  2) Any ./hayekian-site-*.md companions
+  3) Fallbacks (backward-compat): ./claude2.md (temporary symlink), ./claude2-*.md
+- SOP:
+  1) Read ./hayekian-site.md
+  2) Read ./hayekian-site-*.md if present
+  3) Summarize directives before taking actions
